@@ -1,0 +1,17 @@
+0				! iProtect (= 0, unprotected human; /= 0, protected human: = 1 combat uniform; = 2, horizon 1; = 3, CPCU MkIII; = 4, CPCU MKIV
+0				! iWrite ( = 0, do not write out deposition density (ASCII and TecPlot); /= 0, write out deposition density (ASCII and TecPlot)
+1				! # time steps in challenge level file (containing concentration-time history)
+390.0				! time increment for each time step (s)
+4.5				! advection (wind) velocity (m/s) - used for calculation of mass flux
+2.5				! model advection velocity (m/s) used for calculation of u* on human body surface (used for determination of deposition probability)
+1				! # files to process ( = # receptors downwind of release)
+human_geometry_0.plt            ! name of input file containing geometry information on human form
+shear_velocity_2.5_0.plt   	! name of input file containing distribution of shear velocity u* on human form
+normal_velocity_2.5_I_0.plt	! name of input file containing distribution of face velocity Vf on human form
+NakedMan.txt     	! names of input file(s) containing challenge level (one file for each receptor location)
+depDen-NakedMan  	! name of output files containing deposition density for TecPlot plotting (one file for each receptor location) - do not include extension .plt
+depDen-NakedMan		! name of output files containing deposition density (one file for each receptor location) - do not include the extension .dat
+massHis-NakedMan	! name of output files containing total mass deposited on body surface as a function of time - do not include the extension .dat
+massDep-NakedMan 	! name of output files containing mass deposited on each body part (after complete passage of cloud)
+fracMassDistMax-B.txt	! output file containing fractional mass distribution at time corresponding to maximum liquid aerosol concentration (at each receptor)
+MaxLiqConc-B.txt	! maximum liquid aerosol concentration (at each receptor)
