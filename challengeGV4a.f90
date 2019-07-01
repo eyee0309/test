@@ -19,7 +19,7 @@ module para
 ! Note - cell_index is more aptly referred to as body part index
 
 implicit none
-
+! challengeGV4a enforces double precision for all real variables
 integer, parameter :: ep = kind(0.0d0)
 
 integer, parameter :: nBodyParts = 11                   ! # body parts in division of the human form
@@ -29,7 +29,7 @@ integer, parameter :: ncells = 178716                   ! # triangular cells (el
 
 integer, parameter :: nBins = 13                        ! # particle size bins used to represent droplet size distribution
 
-! Parameters defining lognormal particle size distribution 
+! Parameters defining lognormal particle size distribution
 ! (depracated - use JEM to determine challenge levels instead)
 !real(ep), parameter :: dgv = 15.0                           ! mass median diameter (um)
 !real(ep), parameter :: sigG = 1.5                           ! geometric standard deviation
@@ -686,7 +686,7 @@ select case (iProtect)
             end if
 
           end do
-                   
+
        end do
     case (2)                   ! Horizon 1
 !
@@ -721,7 +721,7 @@ select case (iProtect)
             end if
 
           end do
-                   
+
        end do
     case (3)                    ! CPCU MkIII
 !
@@ -756,7 +756,7 @@ select case (iProtect)
             end if
 
           end do
-                   
+
        end do
      case (4)                    ! CPCU MkIV
 !
@@ -791,7 +791,7 @@ select case (iProtect)
             end if
 
           end do
-                   
+
        end do
 
 end select
